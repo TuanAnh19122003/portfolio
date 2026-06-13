@@ -21,14 +21,21 @@
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#github">Github</a>
+            <a href="#architecture">Architecture</a>
             <a href="#contact">Contact</a>
         </nav>
+        <div id="menu-icon" class="menu-icon-wrapper">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
-    <section class="home">
+    <section class="home" id="home">
         <div class="home-content">
-            <span class="status">● Open To Work</span>
+            <div class="status-wrapper">
+                <span class="status">● Open To Work</span>
+            </div>
             <h1>
                 Building APIs.<br>
                 Designing Systems.<br>
@@ -46,7 +53,8 @@
             </div>
         </div>
         <div class="home-image">
-            <div class="avatar-ring">
+            <div class="avatar-container">
+                <div class="avatar-ring"></div>
                 <div class="avatar">TTA</div>
             </div>
         </div>
@@ -74,65 +82,69 @@
         </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="skills">
         <h2 class="section-title">Technical Skills</h2>
-        <div class="skill">
-            <div class="skill-info"><span>Node.js</span><span>90%</span></div>
-            <div class="bar">
-                <div class="fill node"></div>
+        <div class="info-grid">
+            <div class="info-card">
+                <h4>Languages & Runtimes</h4>
+                <p>Node.js, JavaScript (ES6+), TypeScript, .NET (C#)</p>
             </div>
-        </div>
-        <div class="skill">
-            <div class="skill-info"><span>Express.js</span><span>88%</span></div>
-            <div class="bar">
-                <div class="fill express"></div>
+            <div class="info-card">
+                <h4>Frameworks & Libraries</h4>
+                <p>Express.js, NestJS, ASP.NET Core</p>
             </div>
-        </div>
-        <div class="skill">
-            <div class="skill-info"><span>PostgreSQL</span><span>85%</span></div>
-            <div class="bar">
-                <div class="fill postgres"></div>
+            <div class="info-card">
+                <h4>Databases & Caching</h4>
+                <p>PostgreSQL, MySQL, Redis, Meilisearch</p>
             </div>
-        </div>
-        <div class="skill">
-            <div class="skill-info"><span>React Native</span><span>80%</span></div>
-            <div class="bar">
-                <div class="fill react"></div>
+            <div class="info-card">
+                <h4>Tools & DevOps</h4>
+                <p>Git / GitHub, Docker, Postman, RESTful API Design</p>
             </div>
         </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="projects">
         <h2 class="section-title">Featured Projects</h2>
         <div class="project-grid">
             <div class="project-card">
-                <span>2025</span>
+                <div class="project-header">
+                    <span>2025</span>
+                </div>
                 <h3>Degree Verification Ecosystem</h3>
-                <p>Comprehensive ecosystem including web portal, admin dashboard and mobile application.</p>
+                <p>Designed and developed optimized RESTful APIs for verification. Integrated Meilisearch to accelerate
+                    search queries under 50ms and implemented Role-Based Access Control (RBAC) for security.</p>
                 <div class="tags">
                     <span>Node.js</span><span>PostgreSQL</span><span>Meilisearch</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/TuanAnh19122003/meilisearch-degree-manager" target="_blank">View Source →</a>
+                    <a href="https://github.com/TuanAnh19122003/meilisearch-degree-manager" target="_blank">View Source
+                        →</a>
                 </div>
             </div>
             <div class="project-card">
-                <span>2025</span>
+                <div class="project-header">
+                    <span>2025</span>
+                </div>
                 <h3>EPU Smart Lookup</h3>
-                <p>Student verification mobile application.</p>
+                <p>Built stable mobile endpoints for real-time student lookup. Structured secure token-based
+                    authentication via JWT and optimized database fetch queries.</p>
                 <div class="tags">
-                    <span>React Native</span><span>Express.js</span>
+                    <span>React Native</span><span>Express.js</span><span>PostgreSQL</span>
                 </div>
                 <div class="project-links">
                     <a href="https://github.com/TuanAnh19122003/EPU-Smart-Lookup.git" target="_blank">View Source →</a>
                 </div>
             </div>
             <div class="project-card">
-                <span>2024</span>
+                <div class="project-header">
+                    <span>2024</span>
+                </div>
                 <h3>Coffee Shop Management</h3>
-                <p>Fullstack management ecosystem.</p>
+                <p>Designed complex relational database schema (ERD) with MySQL. Developed business logic layers to
+                    handle secure sales transactions and product inventory tracking.</p>
                 <div class="tags">
-                    <span>MySQL</span><span>Express</span>
+                    <span>MySQL</span><span>Express.js</span><span>Node.js</span>
                 </div>
                 <div class="project-links">
                     <a href="https://github.com/TuanAnh19122003/WebApp.git" target="_blank">View Source →</a>
@@ -141,36 +153,56 @@
         </div>
     </section>
 
-    <section id="github">
-        <h2 class="section-title">Github Overview</h2>
-        <div class="github-stats">
-            <div class="stat-card">
-                <h3 id="repo-count">--</h3>
-                <p>Repositories</p>
+    <section id="architecture" class="architecture">
+        <h2 class="section-title">Backend Architecture Mindset</h2>
+        <div class="arch-flow">
+            <div class="arch-step">
+                <div class="arch-icon"><i class='bx bx-shield-quarter'></i></div>
+                <h3>1. Gateway & Security</h3>
+                <p>CORS Control, Rate Limiting chống DDoS, mã hóa JWT State & định danh RBAC nghiêm ngặt ngay tại cửa
+                    ngõ API.</p>
             </div>
-            <div class="stat-card">
-                <h3 id="followers">--</h3>
-                <p>Followers</p>
+            <div class="arch-line"></div>
+            <div class="arch-step">
+                <div class="arch-icon"><i class='bx bx-server'></i></div>
+                <h3>2. Core Business Logic</h3>
+                <p>Xử lý Controller/Services tách biệt (Clean Architecture), tối ưu hóa thuật toán song song và bắt
+                    ngoại lệ tự động.</p>
             </div>
-            <div class="stat-card">
-                <h3 id="following">--</h3>
-                <p>Following</p>
+            <div class="arch-line"></div>
+            <div class="arch-step">
+                <div class="arch-icon"><i class='bx bx-data'></i></div>
+                <h3>3. Optimization Layer</h3>
+                <p>Caching dữ liệu ít biến động với Redis, băm nhỏ Indexing PostgreSQL và tăng tốc độ tìm kiếm văn bản
+                    qua Meilisearch.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2 class="section-title">Contact</h2>
+    <section id="contact" class="contact">
+        <h2 class="section-title">Terminal Connection</h2>
         <div class="terminal">
-            <p>$ contact</p>
-            <p>Email: trinhtuananh132003@gmail.com</p>
-            <p>Phone: 0343181163</p>
-            <p>Github: github.com/TuanAnh19122003</p>
-            <p>Location: Ha Noi, Vietnam</p>
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">bash - contact@tuananh.dev</span>
+            </div>
+            <div class="terminal-body">
+                <p class="command"><span class="user">guest@tuananh:~$</span> curl -X GET
+                    https://api.tuananh.dev/contact</p>
+                <p class="output"><span class="label">Email:</span> trinhtuananh132003@gmail.com</p>
+                <p class="output"><span class="label">Phone:</span> 0343181163</p>
+                <p class="output"><span class="label">Github:</span> <a href="https://github.com/TuanAnh19122003"
+                        target="_blank">github.com/TuanAnh19122003</a></p>
+                <p class="output"><span class="label">Location:</span> Ha Noi, Vietnam</p>
+            </div>
         </div>
     </section>
 
-    <footer>© 2025 Trinh Tuan Anh</footer>
+    <footer>
+        <p>© 2026 Trinh Tuan Anh. All rights reserved.</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="main.js"></script>
