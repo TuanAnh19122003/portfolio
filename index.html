@@ -8,176 +8,266 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="grid-bg"></div>
-
-    <header class="header">
-        <a href="#" class="logo">TTA<span>.</span></a>
-        <nav class="navbar">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <div id="menu-icon" class="menu-icon-wrapper">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </header>
-
-    <section class="home" id="home">
-        <div class="home-content">
-            <div class="status-wrapper">
-                <span class="status">● Open To Work</span>
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-ring" aria-hidden="true">
+                <span class="ring-dot"></span>
+                <span class="ring-dot"></span>
+                <span class="ring-dot"></span>
+                <span class="ring-progress" aria-hidden="true"></span>
+                <div class="ring-core"></div>
             </div>
-            <h1>
-                Building APIs.<br>
-                Designing Systems.<br>
-                Shipping Products.
-            </h1>
-            <h3>I'm <span class="typing"></span></h3>
-            <p>
-                Recent Information Technology graduate passionate about building
-                scalable backend systems, RESTful APIs and modern web applications
-                using Node.js, .NET, React Native and PostgreSQL.
-            </p>
-            <div class="hero-btns">
-                <a href="https://github.com/TuanAnh19122003" target="_blank" class="btn primary">Github</a>
-                <a href="./assets/cv.pdf" class="btn secondary">Download CV</a>
+            <span class="loader-title">Portfolio</span>
+            <span class="loader-subtitle">Crafting your experience<span class="loader-dots">...</span></span>
+            <span class="loader-status">Starting up</span>
+            <span class="loader-progress">1%</span>
+            <div class="loader-bars">
+                <span class="loader-bar"><span class="loader-bar-fill"></span></span>
+                <span class="loader-bar"><span class="loader-bar-fill"></span></span>
+                <span class="loader-bar"><span class="loader-bar-fill"></span></span>
+                <span class="loader-bar"><span class="loader-bar-fill"></span></span>
             </div>
         </div>
-        <div class="home-image">
-            <div class="avatar-container">
-                <div class="avatar-ring"></div>
-                <div class="avatar">TTA</div>
+    </div>
+
+    <!-- Background Mesh Gradients -->
+    <div class="mesh-bg">
+        <div class="mesh-blob blob-1"></div>
+        <div class="mesh-blob blob-2"></div>
+        <div class="mesh-blob blob-3"></div>
+    </div>
+
+    <!-- Floating Navigation -->
+    <nav class="bento-nav">
+        <div class="nav-content">
+            <a href="#" class="logo">TTA.</a>
+            <div class="nav-links">
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Let's Talk</a>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <section class="about" id="about">
-        <h2 class="section-title">System Information</h2>
-        <div class="info-grid">
-            <div class="info-card">
-                <h4>Name</h4>
-                <p>Trinh Tuan Anh</p>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="section-wrapper">
+        <div class="bento-grid hero-grid">
+            <!-- Hero Box -->
+            <div class="bento-box hero-box">
+                <div class="hero-content">
+                    <h1>Trịnh Tuấn Anh</h1>
+                    <h2>Backend Developer</h2>
+                    <p>Building APIs. Designing Systems. Shipping Products. <br>
+                        Passionate about scalable backend systems using Node.js, .NET, React Native and PostgreSQL.</p>
+                    <div class="hero-btns">
+                        <a href="https://github.com/TuanAnh19122003" target="_blank" class="btn primary">GitHub</a>
+                        <a href="./assets/cv.pdf" class="btn secondary">Resume</a>
+                    </div>
+                </div>
+                <div class="hero-avatar">
+                    TTA
+                </div>
             </div>
-            <div class="info-card">
-                <h4>Role</h4>
-                <p>Backend Developer</p>
-            </div>
-            <div class="info-card">
-                <h4>Location</h4>
-                <p>Ha Noi, Vietnam</p>
-            </div>
-            <div class="info-card">
-                <h4>Education</h4>
-                <p>Electric Power University</p>
-            </div>
-        </div>
-    </section>
 
-    <section id="skills" class="skills">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="info-grid">
-            <div class="info-card">
-                <h4>Languages & Runtimes</h4>
-                <p>Node.js, JavaScript (ES6+), TypeScript, .NET (C#)</p>
-            </div>
-            <div class="info-card">
-                <h4>Frameworks & Libraries</h4>
-                <p>Express.js, NestJS, ASP.NET Core</p>
-            </div>
-            <div class="info-card">
-                <h4>Databases & Caching</h4>
-                <p>PostgreSQL, MySQL, Redis, Meilisearch</p>
-            </div>
-            <div class="info-card">
-                <h4>Tools & DevOps</h4>
-                <p>Git / GitHub, Docker, Postman, RESTful API Design</p>
+            <!-- Status Box -->
+            <div class="bento-box status-box">
+                <div class="status-indicator">
+                    <div class="pulse-dot"></div>
+                    <span>Open To Work</span>
+                </div>
+                <p class="location"><i class='bx bx-map'></i> Hanoi, Vietnam</p>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <div class="project-header">
-                    <span>2025</span>
+    <!-- ==================== TAGLINE MARQUEE ==================== -->
+    <section class="section-wrapper marquee-section">
+        <div class="bento-box tagline-box">
+            <div class="marquee-wrapper">
+                <div class="marquee">
+                    <span>Backend Developer</span> <span>•</span>
+                    <span>System Architect</span> <span>•</span>
+                    <span>API Designer</span> <span>•</span>
+                    <span>Problem Solver</span> <span>•</span>
+                    <span>Tech Enthusiast</span> <span>•</span>
                 </div>
-                <h3>Degree Verification Ecosystem</h3>
-                <p>Designed and developed optimized RESTful APIs for verification. Integrated Meilisearch to accelerate
-                    search queries under 50ms and implemented Role-Based Access Control (RBAC) for security.</p>
-                <div class="tags">
-                    <span>Node.js</span><span>PostgreSQL</span><span>Meilisearch</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/TuanAnh19122003/meilisearch-degree-manager" target="_blank">View Source
-                        →</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-header">
-                    <span>2025</span>
-                </div>
-                <h3>EPU Smart Lookup</h3>
-                <p>Built stable mobile endpoints for real-time student lookup. Structured secure token-based
-                    authentication via JWT and optimized database fetch queries.</p>
-                <div class="tags">
-                    <span>React Native</span><span>Express.js</span><span>PostgreSQL</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/TuanAnh19122003/EPU-Smart-Lookup.git" target="_blank">View Source →</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-header">
-                    <span>2024</span>
-                </div>
-                <h3>Coffee Shop Management</h3>
-                <p>Designed complex relational database schema (ERD) with MySQL. Developed business logic layers to
-                    handle secure sales transactions and product inventory tracking.</p>
-                <div class="tags">
-                    <span>MySQL</span><span>Express.js</span><span>Node.js</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/TuanAnh19122003/WebApp.git" target="_blank">View Source →</a>
+                <div class="marquee" aria-hidden="true">
+                    <span>Backend Developer</span> <span>•</span>
+                    <span>System Architect</span> <span>•</span>
+                    <span>API Designer</span> <span>•</span>
+                    <span>Problem Solver</span> <span>•</span>
+                    <span>Tech Enthusiast</span> <span>•</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h2 class="section-title">Terminal Connection</h2>
-        <div class="terminal">
-            <div class="terminal-header">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="terminal-title">bash - contact@tuananh.dev</span>
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section class="section-wrapper" id="skills">
+        <h2 class="section-title">Skills & Tools</h2>
+        <div class="bento-grid skills-grid">
+            <div class="bento-box skill-card">
+                <div class="skill-icon"><i class='bx bx-code-alt'></i></div>
+                <h3>Languages</h3>
+                <div class="skill-tags">
+                    <span>JavaScript</span>
+                    <span>TypeScript</span>
+                    <span>C#</span>
+                    <span>SQL</span>
+                </div>
             </div>
-            <div class="terminal-body">
-                <p class="command"><span class="user">guest@tuananh:~$</span> curl -X GET
-                    https://api.tuananh.dev/contact</p>
-                <p class="output"><span class="label">Email:</span> trinhtuananh132003@gmail.com</p>
-                <p class="output"><span class="label">Phone:</span> 0343181163</p>
-                <p class="output"><span class="label">Github:</span> <a href="https://github.com/TuanAnh19122003"
-                        target="_blank">github.com/TuanAnh19122003</a></p>
-                <p class="output"><span class="label">Location:</span> Ha Noi, Vietnam</p>
+
+            <div class="bento-box skill-card">
+                <div class="skill-icon"><i class='bx bx-layer'></i></div>
+                <h3>Frameworks</h3>
+                <div class="skill-tags">
+                    <span>Express.js</span>
+                    <span>NestJS</span>
+                    <span>ASP.NET</span>
+                    <span>React Native</span>
+                </div>
+            </div>
+
+            <div class="bento-box skill-card">
+                <div class="skill-icon"><i class='bx bx-data'></i></div>
+                <h3>Databases & Tools</h3>
+                <div class="skill-tags">
+                    <span>PostgreSQL</span>
+                    <span>MySQL</span>
+                    <span>Redis</span>
+                    <span>Docker</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section class="section-wrapper" id="projects">
+        <h2 class="section-title">Selected Projects</h2>
+        <div class="bento-grid projects-grid">
+            <!-- Project 1 -->
+            <div class="bento-box project-box">
+                <div class="project-bg" style="background-image: url('assets/project1.png')"></div>
+                <div class="project-overlay">
+                    <div class="project-tags">
+                        <span>Node.js</span><span>PostgreSQL</span><span>Meilisearch</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Degree Verification Ecosystem</h3>
+                        <p>Optimized RESTful APIs, Meilisearch queries under 50ms, RBAC security.</p>
+                        <a href="https://github.com/TuanAnh19122003/meilisearch-degree-manager" target="_blank" class="view-btn">View Source <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bento-box project-box">
+                <div class="project-bg" style="background-image: url('assets/project2.png')"></div>
+                <div class="project-overlay">
+                    <div class="project-tags">
+                        <span>React Native</span><span>Express.js</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>EPU Smart Lookup</h3>
+                        <p>Mobile endpoints for real-time student lookup, secure JWT authentication.</p>
+                        <a href="https://github.com/TuanAnh19122003/EPU-Smart-Lookup.git" target="_blank" class="view-btn">View Source <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bento-box project-box">
+                <div class="project-bg" style="background-image: url('assets/project3.png')"></div>
+                <div class="project-overlay">
+                    <div class="project-tags">
+                        <span>MySQL</span><span>Node.js</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Coffee Shop Management</h3>
+                        <p>Relational database ERD, business logic for sales & inventory.</p>
+                        <a href="https://github.com/TuanAnh19122003/WebApp.git" target="_blank" class="view-btn">View Source <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="section-wrapper" id="contact">
+        <h2 class="section-title">CONNECT</h2>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h2>Let's build something amazing</h2>
+                <p>If you have a strong idea or need a partner to solve backend challenges, click the email below and let's start building together.</p>
+                <a href="#" class="email-trigger" data-email="trinhtuananh132003@gmail.com">trinhtuananh132003@gmail.com</a>
+            </div>
+        </div>
+
+        <!-- Contact Form Modal Box -->
+        <div class="contact-box is-hidden" id="contactBox">
+            <div class="contact-close border-radius" aria-label="Close contact form"><i class='bx bx-x'></i></div>
+            <div class="contact-wrapper">
+                <div class="contact-left">
+                    <div class="connect-label">CONNECT</div>
+                    <h2 class="contact-heading">Let's build something amazing</h2>
+                    <p class="contact-description">I’m ready to turn your idea into a reliable technical solution with clean architecture and fast execution.</p>
+                    
+                    <div class="contact-info">
+                        <div class="info-block">
+                            <div class="info-label">EMAIL ME</div>
+                            <a href="mailto:trinhtuananh132003@gmail.com" class="info-value info-link">trinhtuananh132003@gmail.com</a>
+                        </div>
+                        <div class="info-block">
+                            <div class="info-label">CALL ME</div>
+                            <a href="tel:0343181163" class="info-value info-link">0343181163</a>
+                        </div>
+                        <div class="info-block">
+                            <div class="info-label">BASED IN</div>
+                            <div class="info-value">Hanoi, Vietnam</div>
+                        </div>
+                    </div>
+                    
+                    <a href="./assets/cv.pdf" class="resume-btn">Request Full Resume CV <i class='bx bx-down-arrow-alt'></i></a>
+                </div>
+                
+                <div class="contact-right">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="fullName">YOUR NAME</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="John Doe" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="emailAddr">EMAIL ADDRESS</label>
+                            <input type="email" id="emailAddr" name="emailAddr" placeholder="john@example.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">MESSAGE</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Hi, I would love to discuss a developer role..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary send-btn">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Trinh Tuan Anh. All rights reserved.</p>
+        <div class="footer-row">
+            <div class="footer-item footer-brand">© 2026 TRỊNH TUẤN ANH</div>
+            <div class="footer-item footer-links">
+                <a href="https://github.com/TuanAnh19122003" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook</a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+            <div class="footer-item footer-status">always ready</div>
+        </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="main.js"></script>
 </body>
 
